@@ -1,0 +1,19 @@
+{
+  "name": "chit-chat-api",
+  "version": "1.0.0",
+  "description": "api for simple chat application",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "William Andrade",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "http": "0.0.1-security",
+    "path": "^0.12.7",
+    "socket.io": "^2.3.0"
+  }
+}
