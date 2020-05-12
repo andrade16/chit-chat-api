@@ -29,6 +29,8 @@ socketIo.on('connection', socket => {
     const username = socket.handshake.query.username;
     console.log(`${username} connected`);
 
+    socket.broadcast.emit('client:connection', username);
+
     socket.on('client:message', data => {
         console.log(`${data.username}: ${data.message}`);
 
