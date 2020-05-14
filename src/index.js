@@ -31,6 +31,7 @@ socketIo.on('connection', socket => {
 
     socket.broadcast.emit('client:connection', username);
 
+    // handles message submissions
     socket.on('client:message', data => {
         console.log(`${data.username}: ${data.message}`);
 
@@ -38,8 +39,17 @@ socketIo.on('connection', socket => {
         socket.broadcast.emit('server:message', data);
     });
 
+    // handles user input events
+    socket.on('client:typing', inputData => {
+
+        const inputEvent = {user: username, data: inputData};
+        socket.broadcast.emit('server:typing', inputEvent);
+
+    })
+
     socket.on('disconnect', () => {
         console.log(`${username} disconnected`);
+
     });
 });
 
