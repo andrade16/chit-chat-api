@@ -10,9 +10,10 @@ This is a basic API needed to properly execute chat functionality in [chit-chat-
 ## Functionality for Events
 
 The API handles a few events from the client. They are: 
-- An initial connection 
-- Messages being sent from users
-- Clients disconnection from the API 
+- Client connections
+- Client disconnections
+- Messages being sent from a client with broadcasting to other client connections
+- Typing feedback from a client to broadcast to other client connections
 
 
 ## Resources
